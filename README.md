@@ -23,19 +23,9 @@ promo_git_branch:
 promo_dir:
 work_domain:
 database:
-pusher_app_id:
-pusher_app_key:
-pusher_app_secret:
 app_key:
 minio_key:
 minio_secret:
-zencoder_key:
-webhook_token:
-rentrange_key:
-aws_lambda_key:
-aws_lambda_secret:
-aws_lambda_region:
-aws_lambda_s3:
 
 Dependencies
 ------------
@@ -57,19 +47,9 @@ Example Playbook
         promo_dir:
         work_domain:
         database:
-        pusher_app_id:
-        pusher_app_key:
-        pusher_app_secret:
         app_key:
         minio_key:
         minio_secret:
-        zencoder_key:
-        webhook_token:
-        rentrange_key:
-        aws_lambda_key:
-        aws_lambda_secret:
-        aws_lambda_region:
-        aws_lambda_s3:
       roles:
         - tenantcloud.ansible_role_promo
 

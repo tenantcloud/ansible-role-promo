@@ -1,4 +1,4 @@
 ---
 - name: Copy nginx configured files
-  template: src=www.{{ work_domain }}.conf dest=/usr/local/etc/nginx/servers/www.{{ work_domain }}.conf
+  template: src=www.j2 dest=/usr/local/etc/nginx/servers/www.{{ work_domain }}.conf
   changed_when: false
