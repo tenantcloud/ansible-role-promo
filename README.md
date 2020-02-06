@@ -26,7 +26,6 @@ database:
 app_key:
 minio_key:
 minio_secret:
-nvm_node_version:
 
 Dependencies
 ------------
@@ -51,7 +50,6 @@ Example Playbook
         app_key:
         minio_key:
         minio_secret:
-        nvm_node_version:
       roles:
         - tenantcloud.ansible_role_promo
 
