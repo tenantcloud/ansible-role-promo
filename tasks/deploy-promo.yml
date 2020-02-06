@@ -4,7 +4,7 @@
   args:
     executable: /bin/zsh
   environment:
-    PATH: "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/Users/{{ work_user }}/.yarn/bin/:/Users/{{ work_user }}/.nvm/versions/node/{{ nvm_node_version }}/bin/"
+    PATH: "{{ lookup('env','PATH') }}"
   changed_when: false
 
 - name: Restart nginx
