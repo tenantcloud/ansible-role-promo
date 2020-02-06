@@ -11,3 +11,7 @@
   become: true
   command: /usr/local/bin/brew services restart nginx
   changed_when: false
+
+- name: Copy info file
+  become: true
+  template: src=info.txt.j2 dest=/Users/{{ work_user }}/Desktop/{{ role_name }}.txt
