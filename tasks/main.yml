@@ -1,0 +1,4 @@
+---
+- include: configure-promo.yml
+- include: configure-nginx-settings.yml
+- include: deploy-promo.yml

@@ -1,0 +1,4 @@
+---
+# vars file for tenantcloud.ansible_role_promo
+
+ansible_python_interpreter: "/usr/local/bin/python3"
