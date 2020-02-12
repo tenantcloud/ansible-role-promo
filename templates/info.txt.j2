@@ -5,24 +5,17 @@ Congratulations, you have successfully installed {{ promo_dir }}.
   - {{ database }}_promo
 
   URL Promo site        - https://www.{{ work_domain }}
-  URL Minio site        - https://home.{{ work_domain }}:9002
-  URL Socket site       - https://home.{{ work_domain }}:9090
-  URL Mailcatcher site  - http://127.0.0.1:1080
-  URL Supervisor site   - http://127.0.0.1:9001
 
  If you want to pull the latest changes, switch to the necessary branch and run the script,
 which can be found on the following path - /Users/{{ work_user }}/{{ work_dir }}/{{ promo_dir }}/sh/update.sh
 
  If you want to run basic tests, run the following from the project folder:
 
-     - Run frontend test (carma):
-       npm run test
+     * Before run e2e users test you must run webdriver:
 
-     - Run backend test (phpunit):
-       vendor/bin/phpunit
+     - webdriver-manager clean && node_modules/webdriver-manager/bin/webdriver-manager \
+       update --versions.chrome=71.0.3578.80 && node_modules/webdriver-manager/bin/webdriver-manager \
+       start --versions.chrome=71.0.3578.80
 
-     - Run users test (crawler):
+     - Run e2e users test (crawler):
        protractor protractor.conf.js --crawler
-
-     * Before run e2e test you must run webdriver:
-         - webdriver-manager clean && node_modules/webdriver-manager/bin/webdriver-manager update --versions.chrome=71.0.3578.80 && node_modules/webdriver-manager/bin/webdriver-manager start --versions.chrome=71.0.3578.80
