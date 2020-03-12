@@ -1,6 +1,6 @@
 ---
 - name: Run deploy promo script
-  command: /Users/{{ work_user }}/{{ work_dir }}/{{ promo_dir }}/sh/update.sh
+  command: /Users/{{ work_user }}/{{ work_dir }}/www.{{ work_domain }}/sh/update.sh
   args:
     executable: /bin/zsh
   environment:
@@ -14,4 +14,4 @@
 
 - name: Copy info file
   become: true
-  template: src=info.txt.j2 dest=/Users/{{ work_user }}/Desktop/{{ promo_dir }}.txt
+  template: src=info.txt.j2 dest=/Users/{{ work_user }}/Desktop/www.{{ work_domain }}.txt
