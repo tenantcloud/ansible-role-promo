@@ -26,6 +26,7 @@ database:
 app_key:
 minio_key:
 minio_secret:
+app_env:
 
 Dependencies
 ------------
@@ -50,6 +51,7 @@ Example Playbook
         app_key:
         minio_key:
         minio_secret:
+        app_env:
       roles:
         - tenantcloud.ansible_role_promo
 
