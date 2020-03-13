@@ -53,7 +53,7 @@ Example Playbook
         minio_secret:
         app_env:
       roles:
-        - tenantcloud.ansible_role_promo
+        - tenantcloud.promo
 
 License
 -------
