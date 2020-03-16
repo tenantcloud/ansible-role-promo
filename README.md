@@ -1,4 +1,4 @@
-tenantcloud.ansible_role_promo
+tenantcloud.promo
 =========
 
 Ansible role for install promo project.
@@ -9,9 +9,9 @@ Ansible role for install promo project.
 Requirements
 ------------
 
-Install tenantcloud.ansible_role_software_common
-Install tenantcloud.ansible_role_software_dev
-Install tenantcloud.ansible_role_dashboard
+Install tenantcloud.software_common
+Install tenantcloud.software_dev
+Install tenantcloud.dashboard
 
 Role Variables
 --------------
