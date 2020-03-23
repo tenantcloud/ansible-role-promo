@@ -16,7 +16,7 @@ Install tenantcloud.dashboard
 Role Variables
 --------------
 
-work_user: "user"
+ansible_user: "user" os username
 work_dir: "work"
 promo_git:
 promo_git_branch:
@@ -41,7 +41,7 @@ Example Playbook
     - hosts: localhost
       become: no
       vars:
-        work_user: "user"
+        ansible_user: "user"
         work_dir: "work"
         promo_git:
         promo_git_branch:
