@@ -1,5 +1,4 @@
 ---
 - include: configure-promo.yml
 - include: configure-nginx-settings.yml
-- include: configure-vault-settings.yml
 - include: deploy-promo.yml
