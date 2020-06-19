@@ -1,3 +1,0 @@
----
-- name: Сopy post-checkout script and set permissions
-  template: src=post-checkout.j2 dest=$HOME/{{ work_dir }}/www.{{ work_domain }}/.git/hooks/post-checkout mode=a+x
