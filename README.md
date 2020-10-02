@@ -1,3 +1,7 @@
+
+<img src="https://github.com/tenantcloud/ansible-role-promo/workflows/Ansible Lint/badge.svg?branch-master" alt="">
+<img src="https://github.com/tenantcloud/ansible-role-promo/workflows/Yaml Lint/badge.svg?branch-master" alt="">
+
 tenantcloud.promo
 =========
 

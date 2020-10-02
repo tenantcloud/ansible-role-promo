@@ -13,4 +13,8 @@
   changed_when: false
 
 - name: Copy info file
-  template: src=info.txt.j2 dest=$HOME/Desktop/www.{{ work_domain }}.txt
+  template:
+    src: info.txt.j2
+    dest: $HOME/Desktop/www.{{ work_domain }}.txt
+    mode: 0777
+  changed_when: false
