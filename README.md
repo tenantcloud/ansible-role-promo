@@ -1,6 +1,6 @@
 
-<img src="https://github.com/tenantcloud/ansible-role-promo/workflows/Ansible Lint/badge.svg?branch-master" alt="">
-<img src="https://github.com/tenantcloud/ansible-role-promo/workflows/Yaml Lint/badge.svg?branch-master" alt="">
+![Ansible Lint](https://github.com/tenantcloud/ansible-role-promo/workflows/Ansible%20Lint/badge.svg?branch-master)
+![Yaml Lint](https://github.com/tenantcloud/ansible-role-promo/workflows/Yaml%20Lint/badge.svg?branch-master)
 
 tenantcloud.promo
 =========
@@ -42,22 +42,24 @@ Dependencies
 Example Playbook
 ----------------
 
-    - hosts: localhost
-      become: no
-      vars:
-        ansible_user: "user"
-        work_dir: "work"
-        promo_git:
-        promo_git_branch:
-        promo_dir:
-        work_domain:
-        database:
-        app_key:
-        minio_key:
-        minio_secret:
-        app_env:
-      roles:
-        - tenantcloud.promo
+```yaml
+- hosts: localhost
+  become: no
+  vars:
+    ansible_user: "user"
+    work_dir: "work"
+    promo_git:
+    promo_git_branch:
+    promo_dir:
+    work_domain:
+    database:
+    app_key:
+    minio_key:
+    minio_secret:
+    app_env:
+  roles:
+    - tenantcloud.promo
+```
 
 License
 -------
