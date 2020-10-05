@@ -8,7 +8,6 @@ tenantcloud.promo
 Ansible role for install promo project.
 
   - tenantcloud_promo
-  - keller_promo
 
 Requirements
 ------------
