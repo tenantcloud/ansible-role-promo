@@ -1,6 +1,6 @@
 ---
 - name: Run package installation
-  shell: cd $HOME/{{ work_dir }}/{{ work_domain }} && bcl package install
+  shell: cd $HOME/{{ work_dir }}/www.{{ work_domain }} && bcl package install
   environment:
     PATH: "{{ lookup('env','PATH') }}"
   when: bcl_package_install
