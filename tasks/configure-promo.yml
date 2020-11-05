@@ -137,3 +137,10 @@
     regexp: '^S3_AWS_URL='
     line: 'S3_AWS_URL=https://home.{{ work_domain }}:9002'
     mode: 0644
+
+- name: Add S3_USE_ENDPOINT
+  lineinfile:
+    path: $HOME/{{ work_dir }}/www.{{ work_domain }}/.env
+    regexp: '^S3_USE_ENDPOINT='
+    line: 'S3_USE_ENDPOINT=true'
+    mode: 0644

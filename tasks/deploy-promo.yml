@@ -1,6 +1,6 @@
 ---
 - name: Run deploy promo script
-  command: $HOME/{{ work_dir }}/www.{{ work_domain }}/sh/update.sh
+  command: $HOME/{{ work_dir }}/www.{{ work_domain }}/sh/install_local.sh
   args:
     executable: /bin/zsh
   environment:

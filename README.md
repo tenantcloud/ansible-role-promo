@@ -30,6 +30,7 @@ app_key:
 minio_key:
 minio_secret:
 app_env:
+bcl_package_install:
 
 Dependencies
 ------------
@@ -56,6 +57,7 @@ Example Playbook
     minio_key:
     minio_secret:
     app_env:
+    bcl_package_install:
   roles:
     - tenantcloud.promo
 ```
