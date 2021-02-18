@@ -2,20 +2,11 @@ Congratulations, you have successfully installed www.{{ work_domain }} project.
 
  Ansible role for install www.{{ work_domain }} project.
 
-  - {{ database }}_promo
+  - tenantcloud_promo
 
   URL Promo site        - https://www.{{ work_domain }}
+  URL Minio site        - https://minio-www.{{ work_domain }}
+  URL Supervisor site   - https://supervisor-www.{{ work_domain }}
 
  If you want to pull the latest changes, switch to the necessary branch and run the script,
  which can be found on the following path - {{ ansible_env.HOME }}/{{ work_dir }}/www.{{ work_domain }}/sh/update.sh
-
- If you want to run basic tests, run the following from the project folder:
-
-     * Before run e2e users test you must run webdriver:
-
-     - webdriver-manager clean && node_modules/webdriver-manager/bin/webdriver-manager \
-       update --versions.chrome=71.0.3578.80 && node_modules/webdriver-manager/bin/webdriver-manager \
-       start --versions.chrome=71.0.3578.80
-
-     - Run e2e users test (crawler):
-       protractor protractor.conf.js --crawler

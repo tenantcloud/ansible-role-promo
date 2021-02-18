@@ -1,9 +1,8 @@
 ---
-- name: Run package installation
+- name: Start services via docker-compose
   command: |
     bash -lc "cd {{ project_path }} \
-    && bcl package install"
+    && docker-compose -f docker-compose.mac.yml up -d"
   environment:
     PATH: "{{ lookup('env','PATH') }}"
-  when: bcl_package_install
   changed_when: false

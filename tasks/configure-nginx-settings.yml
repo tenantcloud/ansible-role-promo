@@ -1,7 +1,24 @@
 ---
-- name: Copy nginx configured files
-  template:
-    src: www.conf.j2
-    dest: /usr/local/etc/nginx/servers/www.{{ work_domain }}.conf
-    mode: 0644
+- name: Copy prepare nginx script file
+  copy:
+    src: "files/nginx.sh"
+    dest: "{{ project_path }}/sh/install/nginx-from-ansible.sh"
+    mode: 0777
+
+- name: Run prepare nginx script
+  become: true
+  become_user: "{{ ansible_user }}"
+  expect:
+    command: |
+      bash -lc "cd {{ project_path }} \
+      && sh/install/nginx-from-ansible.sh"
+    responses:
+      "Password:": "{{ ansible_ssh_pass }}"
+  environment:
+    PATH: "{{ lookup('env','PATH') }}"
   changed_when: false
+
+- name: Remove prepare nginx script file
+  ansible.builtin.file:
+    path: "{{ project_path }}/sh/install/nginx-from-ansible.sh"
+    state: absent
