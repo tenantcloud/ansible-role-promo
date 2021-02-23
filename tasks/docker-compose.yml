@@ -2,7 +2,7 @@
 - name: Start services via docker-compose
   command: |
     bash -lc "cd {{ project_path }} \
-    && docker-compose -f docker-compose.mac.yml up -d"
+    && docker-compose up -d"
   environment:
     PATH: "{{ lookup('env','PATH') }}"
   changed_when: false
