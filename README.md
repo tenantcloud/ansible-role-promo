@@ -1,5 +1,5 @@
 
-![Ansible Lint](https://github.com/tenantcloud/ansible-role-promo/workflows/Lint%20Ansible%20Roles/badge.svg?branch-master)
+![Lint Ansible Roles](https://github.com/tenantcloud/ansible-role-promo/workflows/Lint%20Ansible%20Roles/badge.svg?branch-master)
 
 tenantcloud.promo
 =========
@@ -19,16 +19,12 @@ Role Variables
 --------------
 
 ansible_user: "user" os username
+ansible_ssh_pass: "password" of os username
 work_dir: "work"
+work_domain:
 promo_git:
 promo_git_branch:
 promo_dir:
-work_domain:
-database:
-app_key:
-minio_key:
-minio_secret:
-app_env:
 bcl_package_install:
 
 Dependencies
@@ -46,17 +42,13 @@ Example Playbook
   become: no
   vars:
     ansible_user: "user"
+    ansible_ssh_pass: "password"
     work_dir: "work"
+    work_domain:
     promo_git:
     promo_git_branch:
     promo_dir:
-    work_domain:
-    database:
-    app_key:
-    minio_key:
-    minio_secret:
-    app_env:
-    bcl_package_install:
+    bcl_package_install: true
   roles:
     - tenantcloud.promo
 ```

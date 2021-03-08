@@ -1,16 +1,23 @@
 ---
-- name: Run deploy promo script
-  command: $HOME/{{ work_dir }}/www.{{ work_domain }}/sh/install_local.sh
-  args:
-    executable: /bin/zsh
+- name: Copy docker deploy script file
+  copy:
+    src: "files/docker.sh"
+    dest: "{{ project_path }}/sh/install/docker-from-ansible.sh"
+    mode: 0777
+
+- name: Run deploy dashboard script
+  command: |
+    bash -lc "cd {{ project_path }} \
+    && sh/install/docker-from-ansible.sh"
   environment:
     PATH: "{{ lookup('env','PATH') }}"
+  ignore_errors: true
   changed_when: false
 
-- name: Restart nginx
-  become: true
-  command: /usr/local/bin/brew services restart nginx-full
-  changed_when: false
+- name: Remove docker deploy script file
+  ansible.builtin.file:
+    path: "{{ project_path }}/sh/install/docker-from-ansible.sh"
+    state: absent
 
 - name: Copy info file
   template:

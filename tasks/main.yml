@@ -1,5 +1,6 @@
 ---
 - include: configure-promo.yml
 - include: configure-nginx-settings.yml
+- include: docker-compose.yml
 - include: configure-bcl-settings.yml
 - include: deploy-promo.yml

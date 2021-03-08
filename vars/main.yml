@@ -2,3 +2,5 @@
 # vars file for tenantcloud.promo
 
 ansible_python_interpreter: "/usr/local/bin/python3"
+project_path: "{{ ansible_env.HOME }}/\
+{{ work_dir }}/www.{{ work_domain }}"
