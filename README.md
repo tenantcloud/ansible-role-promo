@@ -19,7 +19,7 @@ Role Variables
 --------------
 
 ansible_user: "user" os username
-ansible_ssh_pass: "password" of os username
+ansible_pass: "password" of os username
 work_dir: "work"
 work_domain:
 promo_git:
@@ -42,7 +42,7 @@ Example Playbook
   become: no
   vars:
     ansible_user: "user"
-    ansible_ssh_pass: "password"
+    ansible_pass: "password"
     work_dir: "work"
     work_domain:
     promo_git:
