@@ -1,5 +1,7 @@
 
 ![Lint Ansible Roles](https://github.com/tenantcloud/ansible-role-promo/workflows/Lint%20Ansible%20Roles/badge.svg?branch-master)
+[![Build Status](https://github.com/tenantcloud/ansible-role-promo/workflows/Enlarge%20version/badge.svg)](https://github.com/tenantcloud/ansible-role-promo/workflows/Enlarge%20version/badge.svg)
+[![Stable Version](https://img.shields.io/github/v/tag/tenantcloud/ansible-role-promo)](https://img.shields.io/github/v/tag/tenantcloud/ansible-role-promo)
 
 tenantcloud.promo
 =========

@@ -14,7 +14,7 @@
 
 - name: Copy and setup TenantCloud promo environment file
   copy:
-    src: "{{ project_path }}/.env.example"
+    src: "{{ project_path }}/.env.local"
     dest: "{{ project_path }}/.env"
     mode: 0644
     remote_src: true
